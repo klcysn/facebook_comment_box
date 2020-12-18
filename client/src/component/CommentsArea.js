@@ -39,7 +39,7 @@ export const CommentsArea = () =>{
                             : 
                             <div>
                             <form method="POST" action="http://localhost:8000/api/update">
-                                <input onChange={(x)=> textUpdated(x)} className="message-box" value={text ? text : item.message}/>
+                                <input onChange={(x)=> textUpdated(x.target.value)} className="message-box" value={text ? text : item.message}/>
                                 <button type="submit">update</button>
                             </form>
                             </div>
