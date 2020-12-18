@@ -23,7 +23,7 @@ export const CommentsArea = () =>{
     return(
         <div className="comments-container">    
                 <p className="comments">Comments: </p>
-            {data?.map((item)=>{
+            {data?.map((item, i)=>{
                 return(
                     <div className="message-container">
                         <div className="avatar-container" style={{backgroundColor:`#00${Math.ceil(Math.random()*10000)}`}}>
@@ -39,15 +39,11 @@ export const CommentsArea = () =>{
                             : 
                             <div>
                             <form method="POST" action="http://localhost:8000/api/update">
-                                <input onChange={(x)=> textUpdated(x.target.value)} className="message-box" value={text ? text : item.message}/>
+                                <input key={i} onChange={(x)=> textUpdated(x.target.value)} className="message-box" value={text ? text : item.message} />
                                 <button type="submit">update</button>
                             </form>
                             </div>
-                        }
-                        
-                       
-                        
-                        
+                        } 
                     </div>
                 )
             })

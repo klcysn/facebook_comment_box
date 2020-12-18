@@ -38,6 +38,11 @@
     background-color: burlywood;
 }
 
+input{
+    outline: none;
+    border: none;
+}
+
 .update-btn{
     text-decoration: none;
 }
