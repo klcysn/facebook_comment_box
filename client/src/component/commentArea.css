@@ -28,21 +28,3 @@
     font-weight: 700;
 }
 
-.message-box{
-    width: 15rem;
-    min-height: 3rem;
-    border-radius: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: burlywood;
-}
-
-input{
-    outline: none;
-    border: none;
-}
-
-.update-btn{
-    text-decoration: none;
-}
