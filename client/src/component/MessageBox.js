@@ -19,7 +19,9 @@ export const MessageBox = ({item}) =>{
                     </div>
                     <div className="message-box-button-container">
                         <button className="update-btn" onClick = {Updated}>Update</button>
-                        <button className="update-btn" type="submit">Delete</button>
+                        <form action={`http://localhost:8000/api/delete/${item._id}`} method="GET">
+                            <button className="update-btn" type="submit">Delete</button>
+                        </form>
                     </div>
                 </div>
                 : 

@@ -3,8 +3,8 @@ const comment = require("../models/comment");
 exports.postMessage = async (req, res) => {
     const {user, message} = req.body
     const comment = new Comment({
-        user,
-        message
+        user: user,
+        message: message,
     });
     try {
        await comment.save(comment)
@@ -31,10 +31,10 @@ exports.updateMessage = async (req, res) =>{
         return res.status(400).json({errors:[{message: err.message}]})
     }
 }
-exports.deleteMessage = async (req, res) =>{
+exports.deleteMessage = async (req, res, next) =>{
     try {
         await comment.findOneAndDelete({_id: req.params.id})
-        res.send("deleted")
+        res.redirect("/")
     } catch (error) {
         return res.status(400).json({errors:[{message: err.message}]})
     }
