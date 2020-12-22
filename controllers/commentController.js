@@ -26,7 +26,7 @@ exports.getMessage = async (req, res) =>{
 exports.updateMessage = async (req, res) =>{
     try {
         await comment.findOneAndUpdate({_id: req.body.id}, {...req.body, date: Date.now()}, {runValidators: true})
-        res.send("updated")
+        next()
     } catch (error) {
         return res.status(400).json({errors:[{message: err.message}]})
     }
@@ -34,7 +34,7 @@ exports.updateMessage = async (req, res) =>{
 exports.deleteMessage = async (req, res, next) =>{
     try {
         await comment.findOneAndDelete({_id: req.params.id})
-        res.redirect("/")
+        next()
     } catch (error) {
         return res.status(400).json({errors:[{message: err.message}]})
     }
