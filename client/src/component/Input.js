@@ -1,8 +1,12 @@
-import React from "react"
+import React,{useRef, useEffect, useState} from "react"
 import "./input.css"
 
 
+
+
+
 export const Input = (props) =>{
+    const [text, setText] = useState()
     return(
         <div className="input-container">
             <input className="input-user" onChange={(e)=>{props.userName(e.target.value)}} type="text" id="user" name="user" placeholder="Your Name" />

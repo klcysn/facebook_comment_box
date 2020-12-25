@@ -30,7 +30,7 @@ export const CommentsArea = () =>{
                 {data?.map((item, i)=>{
                     return(
                         <div className="message-container">
-                            <div className="avatar-container" style={{backgroundColor:`#000${Math.floor(Math.random()*1000)}`}}>
+                            <div className="avatar-container" style={{backgroundColor:`#000${Math.floor(Math.random()*100)}0`}}>
                                 <p className="avatar">{item.user[0].toUpperCase()}</p>
                             </div>
                             <MessageBox item={item} />
