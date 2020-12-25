@@ -1,4 +1,4 @@
-import { useState, createContext } from 'react';
+import { useState, createContext, useEffect } from 'react';
 import './App.css';
 import {Input, Button, CommentsArea} from "./component"
 import axios from "axios"
@@ -12,6 +12,11 @@ function App() {
 
   const render = () => setRender(s =>!s)
 
+  useEffect(()=> {
+    setUserName("")
+    setUserMessage("")
+  },[rendered])  
+
   const send = () =>{
      axios.post("http://localhost:8000/api",{
         user: userName,
@@ -24,8 +29,11 @@ function App() {
       <div className="App">
         <CommentsArea />
         <div className="text-area">
+          <form>
             <Input userName = {(name) => setUserName(name)} userMessage={(message)=>setUserMessage(message)} />
             <Button onClick={send} />
+          </form>
+            
         </div>
       </div>
     </RenderContext.Provider>
