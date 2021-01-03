@@ -4,12 +4,20 @@
     justify-content: space-between;
     column-gap: 1rem;
 }
-.input{
+.input-text{
     width: 80%;
     padding: 0.7rem;
     border-radius: 50px;
     border: 1px solid gray;
     outline: none;
+}
+
+.input{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1rem;
+    width: 100%;
+
 }
 
 .input-user{
@@ -20,3 +28,24 @@
     outline: none;
 }
 
+.settings{
+    color: gray;
+    cursor: pointer;
+    position: relative;
+    top: 8px;
+}
+
+.settings:hover{
+    color: black;
+}
+
+.emoji {
+    color: gray;
+    position: relative;
+    top: 8px;
+    cursor: pointer;
+}
+
+.emoji:hover{
+    color: black;
+}

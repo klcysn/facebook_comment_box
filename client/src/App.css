@@ -1,3 +1,8 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
 .text-area{
   display: flex;
   justify-content: center;
@@ -6,10 +11,11 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 2rem;
+  padding: 0.8rem;
+  height: 5%;
 }
 
-form{
+.form{
   width: 100%;
   display: flex;
   justify-content: center;

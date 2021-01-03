@@ -1,9 +1,10 @@
-import {  useState, useContext } from "react";
+import {  useState, useContext, useEffect } from "react";
 import "./MessageBox.css"
 import UpdateMessage from "../helpers/UpdateMessage"
 import axios from "axios"
 import FetchData from "../helpers/FetchData"
 import {RenderContext} from "../App"
+import moment from 'moment'
 
 
 export const MessageBox = ({item}) =>{
@@ -26,6 +27,10 @@ export const MessageBox = ({item}) =>{
     render()
    }
 
+//    useEffect(() => {
+
+//    })
+
     return(
         <div>
             {active 
@@ -37,6 +42,9 @@ export const MessageBox = ({item}) =>{
                     <div className="message-box-button-container">
                         <button className="update-btn" onClick = {activated}>Update</button>
                         <button className="update-btn" type="submit" onClick={deleteMessage}>Delete</button>
+                        <div>
+                           <p className="date">{moment(item.date).startOf('hour').fromNow()}</p> 
+                        </div>
                     </div>
                 </div>
                 : 
