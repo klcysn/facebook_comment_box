@@ -5,12 +5,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: burlywood;
+    background-color: #fbe9e7;
+    box-shadow: 3px 3px 5px gray;
+
 }
 
 input{
     outline: none;
     border: none;
+}
+
+.message{
+    text-align: left;
+    padding: 3px;
 }
 
 .update-btn{
@@ -35,6 +42,6 @@ input{
     font-size: 0.8rem;
     padding: 0;
     margin: 0;
-    margin-left: 2.5rem;
+    margin-left: 3.5rem;
     color: grey;
 }

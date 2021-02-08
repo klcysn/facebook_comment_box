@@ -1,4 +1,4 @@
-import {  useState, useContext } from "react";
+import {  useState, useContext, useEffect } from "react";
 import "./MessageBox.css"
 import UpdateMessage from "../helpers/UpdateMessage"
 import axios from "axios"
@@ -26,6 +26,10 @@ export const MessageBox = ({item}) =>{
     activated()
     render()
    }
+
+//    useEffect(() => {
+
+//    })
 
     return(
         <div>
