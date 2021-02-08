@@ -1,13 +1,13 @@
-import React from "react"
+import React,{useRef, useEffect, useState} from "react"
 import "./input.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCog, faSmile} from '@fortawesome/free-solid-svg-icons'
 
+
+
+
 export const Input = (props) =>{
-
-    // openSettings = () =>{
-
-    // }
+    const [text, setText] = useState()
 
     return(
         <div className="input-container">
